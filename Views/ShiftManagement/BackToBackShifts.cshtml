@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Back to Back Shifts";
+}
+
+<h2>Back to Back Shifts</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Group (Shift)</th>
+            <th>First Employee</th>
+            <th>Second Employee</th>
+            <th>Next Shift Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shift in ViewBag.BackToBackShifts)
+        {
+            <tr>
+                <td>@shift.Group</td>
+                <td>@shift.FirstEmployee</td>
+                <td>@shift.SecondEmployee</td>
+                <td>@shift.NextShiftDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
